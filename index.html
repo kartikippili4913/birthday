@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bestie's Birthday 🎂</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Floating decorations -->
+  <div class="floaties" aria-hidden="true">
+    <span class="floaty f1">✨</span>
+    <span class="floaty f2">🎈</span>
+    <span class="floaty f3">💖</span>
+    <span class="floaty f4">⭐</span>
+    <span class="floaty f5">🎉</span>
+    <span class="floaty f6">✨</span>
+    <span class="floaty f7">🎂</span>
+    <span class="floaty f8">💫</span>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- PAGE 1: Countdown -->
+  <!-- ===================================================== -->
+  <section id="countdown-page" class="page active">
+    <div class="container">
+
+      <p class="eyebrow">    </p>
+
+      <h1 class="headline">
+        Counting down to <span class="accent">Harshiiiii's</span> special day
+      </h1>
+
+      <p class="subtext">Kisi pagal ladki ka birthday aara hai💗</p>
+
+      <div class="badge">
+        <span class="badge-icon">🎀</span>
+        <span>A special celebration awaits you at midnight</span>
+      </div>
+
+      <p class="hint">Something magical is about to unfold ✨</p>
+
+      <div class="timer" id="timer">
+        <div class="time-box">
+          <span class="time-value" id="hours">00</span>
+          <span class="time-label">Hours</span>
+        </div>
+        <div class="time-box">
+          <span class="time-value" id="minutes">00</span>
+          <span class="time-label">Minutes</span>
+        </div>
+        <div class="time-box">
+          <span class="time-value" id="seconds">00</span>
+          <span class="time-label">Seconds</span>
+        </div>
+      </div>
+
+      <button class="cta" id="celebrate-btn">🎀 Let's Celebrate</button>
+
+      <span class="cake-emoji">🧁</span>
+    </div>
+
+
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- MODAL EARLY: Ruko zara -->
+  <!-- ===================================================== -->
+  <div class="modal-overlay" id="modal-early">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-early-close">✕</button>
+      <span class="modal-sparkle">⏰</span>
+      <p class="modal-text">Ruko zara...<br>sabr kro 😄<br>12 baje kholna isko!</p>
+      <div class="modal-actions single">
+        <button class="modal-btn modal-btn-yes" id="modal-early-ok">Theek hai 🙈</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- MODAL 1: Do you wanna see what I made?? -->
+  <!-- ===================================================== -->
+  <div class="modal-overlay" id="modal-1">
+    <div class="modal-card">
+      <span class="modal-sparkle">✨</span>
+      <p class="modal-text">Do you wanna see what I made??</p>
+      <div class="modal-actions">
+        <button class="modal-btn modal-btn-yes" id="modal-1-yes">Yes! 🥹</button>
+        <button class="modal-btn modal-btn-no" id="modal-1-no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- MODAL 2: Have a look at it, Madam Jiii -->
+  <!-- ===================================================== -->
+  <div class="modal-overlay" id="modal-2">
+    <div class="modal-card">
+      <span class="modal-sparkle">✨</span>
+      <p class="modal-text">Have a look at it, Chuhiya</p>
+      <div class="modal-actions single">
+        <button class="modal-btn modal-btn-yes" id="modal-2-go">Let's Go! 🎉</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- PAGE 2: Decorate / Celebrate -->
+  <!-- ===================================================== -->
+  <section id="decorate-page" class="page">
+    <!-- background layers -->
+    <div class="decorate-bg" id="decorate-bg"></div>
+    <div class="fairy-lights" id="fairy-lights" aria-hidden="true"></div>
+
+    <!-- banner -->
+    <div class="banner-wrap" id="banner-wrap" aria-hidden="true">
+      <div class="bunting" id="bunting"></div>
+      <div class="banner-letters" id="banner-letters"></div>
+    </div>
+
+    <!-- balloons -->
+    <div class="deco-balloons" id="deco-balloons" aria-hidden="true"></div>
+
+    <div class="container decorate-container">
+      <h1 class="headline celebrate-title">Let's Celebrate! 🎉</h1>
+      <p class="subtext deco-subtext">Click the buttons to decorate 👇</p>
+
+      <div class="deco-buttons" id="deco-buttons">
+        <button class="deco-btn" id="btn-lights" data-step="0">
+          💡 Turn On the Lights
+        </button>
+        <button class="deco-btn hidden" id="btn-balloons" data-step="1">
+          🎈 Fly the Balloons
+        </button>
+        <button class="deco-btn hidden" id="btn-cake" data-step="2">
+          🎂 Bring Out the Cake!
+        </button>
+        <button class="deco-btn glow hidden" id="btn-message" data-step="3">
+          📩 Have a Message for You, CHOMU padhle isko
+        </button>
+      </div>
+
+      <!-- Cake + blow-candles card -->
+      <div class="cake-card hidden" id="cake-card">
+        <div class="cake-scene" id="cake-scene">
+          <!-- Real SVG cake with candles -->
+          <svg id="cake-svg" viewBox="0 0 260 200" xmlns="http://www.w3.org/2000/svg" width="260" height="200">
+            <!-- Cake plate shadow -->
+            <ellipse cx="130" cy="190" rx="105" ry="10" fill="rgba(0,0,0,0.08)"/>
+            <!-- Bottom tier -->
+            <rect x="20" y="130" width="220" height="55" rx="12" fill="#ff8fab"/>
+            <rect x="20" y="130" width="220" height="14" rx="6" fill="#ffb3c6"/>
+            <!-- Frosting drips bottom -->
+            <ellipse cx="50"  cy="130" rx="10" ry="7" fill="white" opacity=".85"/>
+            <ellipse cx="85"  cy="130" rx="9"  ry="6" fill="white" opacity=".85"/>
+            <ellipse cx="120" cy="130" rx="10" ry="7" fill="white" opacity=".85"/>
+            <ellipse cx="155" cy="130" rx="9"  ry="6" fill="white" opacity=".85"/>
+            <ellipse cx="190" cy="130" rx="10" ry="7" fill="white" opacity=".85"/>
+            <ellipse cx="218" cy="132" rx="8"  ry="5" fill="white" opacity=".85"/>
+            <!-- Top tier -->
+            <rect x="50" y="82" width="160" height="52" rx="10" fill="#ff6b81"/>
+            <rect x="50" y="82" width="160" height="12" rx="6" fill="#ff8fab"/>
+            <!-- Frosting drips top -->
+            <ellipse cx="72"  cy="82" rx="9"  ry="6" fill="white" opacity=".9"/>
+            <ellipse cx="100" cy="82" rx="9"  ry="6" fill="white" opacity=".9"/>
+            <ellipse cx="130" cy="82" rx="10" ry="7" fill="white" opacity=".9"/>
+            <ellipse cx="160" cy="82" rx="9"  ry="6" fill="white" opacity=".9"/>
+            <ellipse cx="190" cy="83" rx="8"  ry="5" fill="white" opacity=".9"/>
+            <!-- Decorations on bottom tier -->
+            <circle cx="60"  cy="155" r="5" fill="#ffd166"/>
+            <circle cx="100" cy="150" r="4" fill="#5ad6ff"/>
+            <circle cx="140" cy="155" r="5" fill="#ffd166"/>
+            <circle cx="180" cy="150" r="4" fill="#9b59ff"/>
+            <circle cx="215" cy="155" r="4" fill="#ff6b81"/>
+            <!-- Sprinkles top tier -->
+            <rect x="68"  y="100" width="8" height="3" rx="2" fill="#ffd166" transform="rotate(-20 68 100)"/>
+            <rect x="95"  y="95"  width="8" height="3" rx="2" fill="#5ad6ff" transform="rotate(15 95 95)"/>
+            <rect x="130" y="100" width="8" height="3" rx="2" fill="#fff" transform="rotate(-10 130 100)"/>
+            <rect x="165" y="96"  width="8" height="3" rx="2" fill="#ff8fab" transform="rotate(25 165 96)"/>
+            <rect x="188" y="102" width="8" height="3" rx="2" fill="#9b59ff" transform="rotate(-30 188 102)"/>
+          </svg>
+
+          <!-- SVG Candles overlaid on top of cake SVG -->
+          <div class="candles-row" id="candles-row">
+            <!-- 5 candles injected by JS -->
+          </div>
+        </div>
+
+        <button class="deco-btn blow-btn" id="btn-blow">
+          🕯️ Click to Blow the Candles
+        </button>
+        <p class="music-note hidden" id="music-note">🎵 Playing: Happy Birthday tune 🎵</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- PAGE 3: Envelope / Message -->
+  <!-- ===================================================== -->
+  <section id="envelope-page" class="page">
+    <div class="container envelope-container">
+      <p class="eyebrow">A Message From My Heart 💌</p>
+
+      <div class="envelope" id="envelope">
+        <div class="envelope-back"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-letter" id="envelope-letter">
+          <p class="letter-greeting">My dearest Bestie,</p>
+          <p class="letter-body">
+            Happy Birthday Buddhu 🎉
+
+            Socha tha simple sa birthday wish karunga, par phir yaad aaya ki hum dono ki history kabhi simple rahi hi nahi 😂.
+
+            Ek saal bhi nahi hua properly, lekin itne time mein hi humne jitni bakchodi, arguments, random conversations aur awkward moments dekh liye hain, utna toh kuch log saalon mein nahi dekhte.
+
+            Achhi baat ye hai ki chahe jo bhi hua ho, aaj hum phir normal hain aur honestly mujhe ye kaafi achha lagta hai.
+
+            Thanks meri faltu baatein sunne ke liye, mujhe jhelne ke liye, aur jab zarurat ho tab reality check dene ke liye 😒😂.
+
+            Bas aaj ke din gussa thoda side mein rakh, achhe se enjoy kar, cake kha aur khush reh. Baaki jo bhi goals aur plans hain tere, sab poore ho jaayein.
+
+            Happy Birthday 🎂🥳
+
+            — Tera kabhi-kabhi pareshan karne wala dost 🤝
+          </p>
+          <p class="letter-body">
+               
+          </p>
+          <p class="letter-signoff">Forever your favorite irritating person,<br>— Me 💖</p>
+        </div>
+        <button class="envelope-open-btn" id="envelope-open-btn">Click to Open</button>
+      </div>
+
+      <button class="cta secondary" id="back-to-decorate-btn">⬅ Back</button>
+    </div>
+  </section>
+
+  <!-- Background music (optional) -->
+  <audio id="bg-music" src="happy_bday.mp3" loop preload="auto"></audio>
+
+  <!-- Confetti canvas (shared) -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
